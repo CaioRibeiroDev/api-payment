@@ -1,8 +1,8 @@
 import 'reflect-metadata'
+import '../src/http/tsyringe'
 import 'express-async-errors'
 import cors from 'cors'
 import express, { NextFunction, Request, Response, urlencoded } from 'express'
-import '../src/http/tsyringe'
 import { AppError } from './errors/app-error'
 import { routes } from './routes'
 

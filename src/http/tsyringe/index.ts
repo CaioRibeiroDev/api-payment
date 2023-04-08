@@ -1,10 +1,10 @@
-// import { container } from 'tsyringe'
-// import { AccountRepository } from 'src/modules/account/repositories/AccountRepository'
-// import { IAccountRepository } from 'src/modules/account/repositories/IAccountRepository'
+import { InterfaceUsersRepository } from 'src/repositories/interface-users-repository'
+import { PrismaUserRepository } from 'src/repositories/prisma/prisma-users-repository'
+import { container } from 'tsyringe'
 
-/**
- * container.registerSingleton<NameRepositoryInterface>(
- *    'NameRepository',
- *    NameRepository
- *  )
- */
+
+container.registerSingleton<InterfaceUsersRepository>(
+  'PrismaUserRepository',
+  PrismaUserRepository
+)
+ 
